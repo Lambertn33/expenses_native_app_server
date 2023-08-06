@@ -23,9 +23,9 @@ export class Expense extends Model<ExpenseAttributes> {
 
   @Column({
     allowNull: false,
-    type: DataType.NUMBER,
+    type: DataType.BIGINT,
   })
-  amount!: Number;
+  amount!: number;
 
   @Column({
     allowNull: false,

@@ -24,7 +24,7 @@ __decorate([
 __decorate([
     (0, sequelize_typescript_1.Column)({
         allowNull: false,
-        type: sequelize_typescript_1.DataType.NUMBER,
+        type: sequelize_typescript_1.DataType.BIGINT,
     }),
     __metadata("design:type", Number)
 ], Expense.prototype, "amount", void 0);
