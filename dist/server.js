@@ -38,11 +38,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv = __importStar(require("dotenv"));
+const body_parser_1 = __importDefault(require("body-parser"));
 const db_1 = __importDefault(require("./database/db"));
+const expenses_route_1 = __importDefault(require("./routes/expenses.route"));
 dotenv.config();
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const app = (0, express_1.default)();
+    app.use(body_parser_1.default.json());
     app.use((0, cors_1.default)());
+    app.use("/expenses", expenses_route_1.default);
     yield db_1.default.sync();
     app.listen(process.env.SYSTEM_PORT, () => {
         console.log(`listening on port ${process.env.SYSTEM_PORT}`);

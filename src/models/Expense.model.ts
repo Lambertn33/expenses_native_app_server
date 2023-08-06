@@ -11,8 +11,6 @@ interface ExpenseAttributes {
   tableName: "expenses",
   timestamps: true,
 })
-
-
 export class Expense extends Model<ExpenseAttributes> {
   @Column({
     allowNull: false,
@@ -23,7 +21,7 @@ export class Expense extends Model<ExpenseAttributes> {
 
   @Column({
     allowNull: false,
-    type: DataType.BIGINT,
+    type: DataType.DECIMAL(8, 2),
   })
   amount!: number;
 
