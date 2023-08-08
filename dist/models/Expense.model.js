@@ -38,9 +38,9 @@ __decorate([
 __decorate([
     (0, sequelize_typescript_1.Column)({
         allowNull: false,
-        type: sequelize_typescript_1.DataType.DATE,
+        type: sequelize_typescript_1.DataType.STRING,
     }),
-    __metadata("design:type", Date)
+    __metadata("design:type", String)
 ], Expense.prototype, "date", void 0);
 Expense = __decorate([
     (0, sequelize_typescript_1.Table)({

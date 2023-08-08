@@ -33,7 +33,7 @@ export class Expense extends Model<ExpenseAttributes> {
 
   @Column({
     allowNull: false,
-    type: DataType.DATE,
+    type: DataType.STRING,
   })
-  date!: Date;
+  date!: string;
 }

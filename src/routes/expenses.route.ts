@@ -8,4 +8,8 @@ router.get("/", expensesController.getExpenses);
 
 router.post("/", expensesController.createExpense);
 
+router.put("/:id", expensesController.updateExpense);
+
+router.delete("/:id", expensesController.deleteExpense);
+
 export default router;
